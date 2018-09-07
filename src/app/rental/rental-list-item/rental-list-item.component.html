@@ -1,0 +1,11 @@
+<a routerLink="/rentals/{{rental._id}}">
+<div class="card-car-card">
+    <img class="card-img-top" src="{{ rental.image }}" alt="">       
+    <div class="card-block"> 
+    <h6 class="card-subtitle">{{ rental.category }}</h6>
+    <h4 class="card-title">{{ rental.model }}</h4>
+    <p class="card-text">{{rental.dailyRate }} $ Per Day &#183; Free Cancelation</p>
+  <!--   <a herf="#" class="card-link">More Info</a>   -->  
+  </div>
+</div>
+</a>

@@ -1,0 +1,23 @@
+<!-- <router-outlet></router-outlet> -->
+<nav class = "navbar navbar-default">
+<!--<nav class = "navbar navbar-expand-lg navbar-light bg-light"> -->
+        <div class = "container-fluid">
+          <div class = "row">
+    <!-- <a class="navbar-brand" herf="app-home" role="button" (click) = "onSelect('app-home')">Car 2 Rental</a> -->
+    <a class="navbar-brand" role="button" routerLink = "/car 2 rental">Car 2 Rental</a>
+    <input class="car-rental-app-search" type="Search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0 btn-car-rental-app-search" type="submit">Search</button>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+        <a class="nav-link" role="button" routerLink = "/rentals">Car Rentals</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" routerLink="/login" role="button">Login<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" routerLink="/register" role="button">register</a>
+                   </li>
+                 </ul>                 
+             </div>
+         </div>
+</nav>   

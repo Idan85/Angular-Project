@@ -1,0 +1,62 @@
+img {
+
+    width: 100%;
+    margin-bottom: 30px;
+
+
+}
+
+.detail-section {
+
+    color: #484848;
+}
+
+.rental {
+
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.rental-type {
+
+    margin-bottom: 5px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.rental-title {
+
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.rental-specificiations {
+
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.rental-car-info {
+
+    margin-bottom: 20px;
+    font-weight:300;
+    font-size: 22px;
+    margin-right: 10px;
+    display: block;
+}
+
+.rental-assets {
+
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 22px;
+    display: block;
+    text-align: center;
+}
+
+
+
