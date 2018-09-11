@@ -24,7 +24,10 @@
        <div class="col-md-6">
             <app-map [location]="rental.pickup + ' ' + rental.dropoff"></app-map>
             <hr>
-            <div class="section">
+            <div class="col-md-10">
+                <app-rental-detail-booking [price]="rental.dailyRate"></app-rental-detail-booking>
+            </div>
+            <!-- <div class="section">
                     <div class="section-content">
                         <div id="supplier-information" class="supplier-information">
                             <div class="supplier-information-column">
@@ -32,13 +35,13 @@
                                     <div class="supplier-information-section">
                                         <h2 class="title"> Supplier Location</h2>                                           
                                         <div class="supplier-information">Pick-up:</div>                                                
-                                        <h3 class="supplier-information-heading">{{ rental.pickup }}</h3>
+                                        <h3 class="supplier-information-heading">{{ rental.pickup }}</h3> -->
 
                                         <!-- <div class="supplier-information-row">
                                             <div class="supplier-information-address">Sde Dov Airport, Tel Aviv, Tel Aviv, Israel</div>
                                         </div> -->
 
-                                        <div class="supplier-information-row">
+                                        <!-- <div class="supplier-information-row">
                                         <h4 class="supplier-information-title"> Opening hours:</h4>                                                    
                      
                         <tr>
@@ -64,27 +67,25 @@
                                             <div class="supplier-information-return"> Drop-off:</div>  
                                             <h3 class="supplier-information-heading">{{ rental.dropoff }}</h3>
                                                 
-                                            <!-- <div class="supplier-information-row">
+                                             <div class="supplier-information-row">
                                                 <div class="supplier-information-address">Tel Aviv, Tel Aviv, Israel</div>                                                 -->
                                             <!-- </div> -->
-                                            <div class="supplier-information-row">
+                                            <!-- <div class="supplier-information-row">
                                                 <h4 class="supplier-information-title">Opening hours:</h4>
                               <tr>
                                 <td class="supplier-information-opening-day-and-time">Sunday - Monday - 24 hr</td>
                                     </tr>               
                                           </div>
-                                        </div>
-                                    </div>
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                                        </div> 
+                                    </div> -->
+                  <!-- </div>
                 </div>
-               </div>
-         </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </div>
-
-
         <div class="col-md-10">  
          <div class = "rental-assets">     
               <hr>        
