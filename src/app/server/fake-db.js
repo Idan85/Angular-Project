@@ -1,5 +1,7 @@
 const Rental = require('./models/rental');
 
+const User = require ('./models/user');
+
 class FakeDb {
 
     constructor() {
@@ -16,7 +18,7 @@ class FakeDb {
     dailyRate: 46,
     image: 'https://cdn2.rcstatic.com/images/car_images/new_images/suzuki/alto_lrg.jpg',
     pickup: 'Ben Gurion Airport, terminal 3',
-    dropoff: 'Sde Dov Airport, Tel Aviv-Yafo'
+    // dropoff: 'Sde Dov Airport, Tel Aviv-Yafo'
   },
 
   {
@@ -30,7 +32,7 @@ class FakeDb {
   dailyRate: 95,
   image: 'https://cdn2.rcstatic.com/images/car_images/new_images/kia/picanto_5_door_lrg.jpg',
   pickup: 'Sde Dov Airport, Tel Aviv-Yafo',
-  dropoff:'Ben Gurion Airport, terminal 3'
+  // dropoff:'Ben Gurion Airport, terminal 3'
 },
 
 {
@@ -44,7 +46,7 @@ class FakeDb {
     dailyRate: 54,
     image: 'https://cdn2.rcstatic.com/images/car_images/new_images/hyundai/i25_accent_lrg.jpg',
     pickup: 'Ben Gurion Airport, terminal 3',
-    dropoff: 'Sde Dov Airport, Tel Aviv-Yafo'
+    // dropoff: 'Sde Dov Airport, Tel Aviv-Yafo'
   },
 
   {
@@ -58,7 +60,7 @@ class FakeDb {
     dailyRate: 94,
     image: 'https://cdn2.rcstatic.com/images/car_images/new_images/nissan/micra_lrg.jpg',
     pickup: 'Sde Dov Airport, Tel Aviv-Yafo',
-    dropoff: 'Ben Gurion Airport, terminal 3'
+    // dropoff: 'Ben Gurion Airport, terminal 3'
   },
 
 
@@ -73,7 +75,7 @@ class FakeDb {
     dailyRate: 78,
     image: 'https://cdn2.rcstatic.com/images/car_images/new_images/mazda/6_lrg.jpg',
     pickup: 'Ben Gurion Airport, terminal 3',
-    dropoff: 'Sde Dov Airport, Tel Aviv-Yafo'
+    // dropoff: 'Sde Dov Airport, Tel Aviv-Yafo'
   },
 
   {
@@ -87,7 +89,7 @@ class FakeDb {
     dailyRate: 123,
     image: 'https://cdn2.rcstatic.com/images/car_images/new_images/subaru/impreza_lrg.jpg',
     pickup: 'Sde Dov Airport, Tel Aviv-Yafo',
-    dropoff: 'Ben Gurion Airport, terminal 3'
+    // dropoff: 'Ben Gurion Airport, terminal 3'
   },
 
   {
@@ -101,7 +103,7 @@ class FakeDb {
   dailyRate: 231,
   image: 'https://cdn2.rcstatic.com/images/car_images/new_images/mazda/5_lrg.jpg',
   pickup: 'Ben Gurion Airport, terminal 3',
-  dropoff: 'Sde Dov Airport, Tel Aviv-Yafo'
+  // dropoff: 'Sde Dov Airport, Tel Aviv-Yafo'
   },
 
   {
@@ -115,7 +117,7 @@ class FakeDb {
   dailyRate: 205,
   image: 'https://cdn2.rcstatic.com/images/car_images/new_images/citroen/berlingo_lrg.jpg',
   pickup: 'Sde Dov Airport, Tel Aviv-Yafo',
-  dropoff: 'Ben Gurion Airport, terminal 3' 
+  // dropoff: 'Ben Gurion Airport, terminal 3' 
   },
 
     {
@@ -129,7 +131,7 @@ class FakeDb {
   dailyRate: 192,
   image: 'https://cdn2.rcstatic.com/images/car_images/new_images/opel/mokka_lrg.jpg',
   pickup: 'Ben Gurion Airport, terminal 3',
-  dropoff: 'Sde Dov Airport, Tel Aviv-Yafo'
+  // dropoff: 'Sde Dov Airport, Tel Aviv-Yafo'
       },
 
     {
@@ -143,31 +145,49 @@ class FakeDb {
   dailyRate: 157,
   image: 'https://cdn2.rcstatic.com/images/car_images/new_images/mitsubishi/outlander_lrg.jpg',
   pickup: 'Sde Dov Airport, Tel Aviv-Yafo',
-  dropoff: 'Ben Gurion Airport, terminal 3'
-    }]
+  // dropoff: 'Ben Gurion Airport, terminal 3'
+    }];
+
+    this.users = [{
+
+      username: "Tesr User",
+
+      email: "test@gmail.com",
+
+      password: "testtest"
+    }];
     }
    
 async cleanDb() {
 
+    await User.remove({});
+
     await Rental.remove({});
 }
 
-pushRentalsToDb() {
+pushDataToDb() {
+
+  const user = new User ( this.users [ 0 ]);
 
     this.rentals.forEach ((rental) => {
 
         const newRental = new Rental (rental);
 
-        newRental.save();
-        
-    })
+        newRental.user = user;
+
+        user.rentals.push ( newRental );
+
+        newRental.save();   
+    });
+
+    user.save ();
 }
 
-seedDb() {
+async seedDb() {
 
-    this.cleanDb();
+    await this.cleanDb();
 
-    this.pushRentalsToDb();
+    this.pushDataToDb();
     }
 }
 

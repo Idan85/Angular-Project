@@ -1,0 +1,77 @@
+.btn.btn-danger.btn-confirm.btn-clock {
+
+    background-color: #FF5A5F;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 13px;
+    left: 20%;
+    position: relative;
+}
+
+
+label {
+
+    color: #FF5A5F;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    position: relative;
+    left: 35%;
+    
+}
+
+.form-control {
+
+    font-weight: 200;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 20px;
+    color: #555;
+}
+
+#days.form-control {
+
+    text-align: center;
+    width: 80%;
+    position: relative;
+    margin-right: 35px;
+    box-sizing: border-box;
+    display: inline-block; 
+}
+
+.form-control.daterangepicker-input {
+
+    text-align: center;
+    width: 80%;
+    position: relative;
+    margin-right: 35px;
+    box-sizing: border-box;
+    display: inline-block;  
+}
+
+h3 {
+
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    left: 25%;
+    
+}
+
+.booking-note-title {
+
+    font-size: 22px;
+    margin-bottom: 10x;
+    position: relative;
+
+}
+
+.booking-note-text {
+
+    font-size: 20px;
+    font-weight: 300;
+    position: relative;
+}
+
+

@@ -13,9 +13,12 @@
     ],
     "lib": [
       "es2017",
-      "dom"
+      "dom",
+      "es2015.promise" 
     ],
     "module": "es2015",
     "baseUrl": "./"
+
+    
   }
 }

@@ -11,13 +11,28 @@
         <li class="nav-item">
         <a class="nav-link" role="button" routerLink = "/rentals">Car Rentals</a>
         </li>
+
+        <ng-container *ngIf="!auth.isAuthenticated()">
         <li class="nav-item">
         <a class="nav-link" routerLink="/login" role="button">Login<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" routerLink="/register" role="button">register</a>
-                   </li>
-                 </ul>                 
-             </div>
-         </div>
-</nav>   
+        <a class="nav-link" routerLink="/register" role="button">Register</a>
+        </li>
+        </ng-container>
+
+        <ng-container *ngIf="auth.isAuthenticated()">
+        <li class="nav-item clickable">
+            <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link">{{ auth.getUsername () }}</a>
+        </li>
+        </ng-container>
+
+       </ul> 
+     </div>                           
+   </div>
+</nav>          
+        
