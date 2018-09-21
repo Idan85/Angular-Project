@@ -17,11 +17,14 @@ import { UpeercasePipe } from '../common/pipes/uppercase.pipe';
 
 import { AuthGuard } from './../auth/shared/auth.guard';
 import { RentalDetailBookingComponent } from './rental-detail/rental-detail-booking/rental-detail-booking.component';
+import { SearchComponent } from './search/search.component';
+import { FilterResultsComponent } from './rental-list/filter-results/filter-results.component';
 
 const routes: Routes = [
     { path: 'rentals',
       component: RentalComponent,
       children: [
+        //   { path: '', component: SearchComponent },
           { path: '', component: RentalListComponent},
           { path: ':rentalId', component: RentalDetailComponent, canActivate: [ AuthGuard ]}
       ]
@@ -35,7 +38,9 @@ const routes: Routes = [
         RentalListItemComponent,
         RentalDetailComponent,
         UpeercasePipe,
-        RentalDetailBookingComponent
+        RentalDetailBookingComponent,
+        SearchComponent,
+        FilterResultsComponent
     ],
 
     imports: [

@@ -9,8 +9,8 @@ const rentalSchema = new Schema ({
     company: { type: String, required: true, min: [4, 'Too short, min is 4 characters'] },
     // city: { type: String, required: true, min: [4, 'Too short, min is 4 characters'] },
    /*  street: { type: String, required: true, min: [4, 'Too short, min is 4 characters'] }, */
-    pickup: { type: String, required: true, min: [4, 'Too short, min is 4 characters'] },  
-    // dropoff: { type: String, required: true, min: [4, 'Too short, min is 4 characters'] }, 
+    pickup: { type: String},  
+    dropoff: { type: String}, 
     year: Number, 
     seats: Number, 
     doors: Number,
@@ -18,7 +18,8 @@ const rentalSchema = new Schema ({
     dailyRate: Number,
     image: { type: String, required: true },
 
-    user: [{ type: Schema.Types.ObjectId, ref: 'User'}]
+    user: { type: Schema.Types.ObjectId, ref: 'User'},
+    bookings: [{ type: Schema.Types.ObjectId, ref: 'Booking'}]
 });
 
 module.exports = mongoose.model('Rental', rentalSchema );
