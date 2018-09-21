@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 
-// tslint:disable-next-line:import-blacklist
 import { Observable } from 'rxjs';
 
 import { Rental } from './rental.model';

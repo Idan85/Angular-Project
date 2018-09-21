@@ -1,43 +1,66 @@
-a {
+.list-group-item.clearfix {
 
- text-decoration: none;
-}
-
-.car-card {
-border: none;
-}
-
-.card-img-top {
-width: 100%;
-height: 10vw;
-object-fit: cover;
-}
-
-.card-block {
-padding-top:8px;
-}
-
-.card-subtitle {
-    margin: 0;
-    font-weight: 1000;
-    font-size: 30px;
-    color: #16861a;    
-} 
-
-.card-title {
-font-size: 30px;
-font-weight: 600;
-margin: 3px 0;
-color: #484848;
+    box-sizing: border-box;
+    
+    
 }
 
 .card-text {
+
 font-size: 20px;
 font-weight: 800;
 color: #7e7e7e;
-margin-bottom: 0;
+position: relative;;
 }
 
-.card-link {
-font-size: 20px;
+.btn.btn-danger.btn-confirm.btn-clock {
+
+    background-color: #FF5A5F;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 13px;
+    position: relative;
+    margin: 130px;
+
 }
+
+.card-title {
+
+font-size: 25px;
+font-weight: 600;
+color:green;
+position: relative;
+left: 75px;
+
+}
+
+.card-subtitle {
+
+    font-weight: 1000;
+    font-size: 25px;
+    color: #16861a; 
+    position: relative;
+    left: 350px;   
+} 
+
+
+.rental-car-info {
+
+    margin-bottom: 20px;
+    font-weight:300;
+    font-size: 20px;
+    position: absolute;
+    left: 250px;
+    margin: 50px;
+}
+
+.rental-assets {
+
+    margin-bottom: 20px;
+    font-weight:300;
+    font-size: 20px;
+    position: absolute;
+    left: 500px;
+    margin: 50px;
+}
+
