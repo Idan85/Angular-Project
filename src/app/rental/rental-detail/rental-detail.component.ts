@@ -3,9 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { RentalService } from './../shared/rental.service';
 import { Rental } from '../shared/rental.model';
 
-import { fontawesome } from '@fortawesome/fontawesome-free';
-import { faTrashAlt } from '@fortawesome/fontawesome-free-regular/';
-
 @Component({
   selector: 'app-rental-detail',
   templateUrl: './rental-detail.component.html',

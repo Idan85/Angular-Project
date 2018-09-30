@@ -9,6 +9,8 @@ export class FilterResultsComponent implements OnInit {
 
   public daterange: any = {};
 
+  public isCollapsed = false;
+
   constructor() { }
 
   ngOnInit() {

@@ -1,3 +1,5 @@
+
+import {map} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
@@ -56,9 +58,9 @@ export class AuthService {
 
     public login(userData: any): Observable<any> {
 
-        return this.http.post('/api/v1/users/auth', userData ).map (
+        return this.http.post('/api/v1/users/auth', userData ).pipe(map (
 
-            ( token: string ) => this.saveToken ( token ));
+            ( token: string ) => this.saveToken ( token )));
             }
 
     public logout () {

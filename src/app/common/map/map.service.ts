@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import {of as observableOf,  Observable } from 'rxjs';
 
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 
 import { CamelizePipe } from 'ngx-pipes';
 
@@ -60,7 +60,7 @@ export class MapService {
 
         if (this.isLocationCached (location)) {
 
-            return Observable.of(this.locationCache [this.camelize(location)]);
+            return observableOf(this.locationCache [this.camelize(location)]);
 
         } else {
 
