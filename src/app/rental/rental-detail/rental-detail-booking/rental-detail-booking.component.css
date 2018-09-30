@@ -74,4 +74,91 @@ h3 {
     position: relative;
 }
 
+ng-template {
+
+    position: relative;
+    margin-bottom: 500px;
+}
+
+.modal-header {
+
+    position: relative;    
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+
+.close {
+
+    position: relative;  
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+}
+
+.modal-title.pull-left {
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+button.btn.btn-default {
+
+    background-color: #FF5A5F;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    position: relative;
+}
+
+em {
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+p {
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+}
+
+.overlay-container {
+
+    background-color: #FF5A5F;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    position: relative;
+}
+
+.active.start-date.available {
+
+    background-color: #FF5A5F;
+}
+
+.active.end-date.in-range.available {
+    
+    background-color: #FF5A5F;
+}
+
+.in-range.available {
+
+    background-color: #ffa9a9;
+}
+
+    
+
+
+
+
 

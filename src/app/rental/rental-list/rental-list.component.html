@@ -29,11 +29,11 @@
   <!-- </form>     -->
     <h1 class="title">Your Home Everywhere In The Globe - Car 2 Rental</h1>
     <div class="row">
-       <div class="col-md-3">
+       <div class="col-md-2">
             <app-filter-results></app-filter-results>
         </div>
         
-      <div class="col-md-9" *ngFor="let rental of rentals">
+      <div class="col-md-10" *ngFor="let rental of rentals">
         <app-rental-list-item [rental]="rental"></app-rental-list-item>
 
         

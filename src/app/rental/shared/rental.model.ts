@@ -1,3 +1,5 @@
+import { Booking } from './../../booking/shared/booking.model';
+
 export class Rental {
 
     _id: string;
@@ -12,6 +14,8 @@ export class Rental {
     specificiations: string;
     dailyRate: number;
     image: string;
+
+    bookings: Booking[];
 }
 
 

@@ -1,9 +1,3 @@
-.form-control {
-
-    font-size: 22px;
-
-}
-
 .catchphrase {
 
     text-align: center;
@@ -30,7 +24,7 @@
 
 label {
 
-    color: #FF5A5F;
+    color:black;
     font-size: 22px;
     font-weight: 700;
     position: relative;
@@ -45,36 +39,18 @@ select {
     font-size: 20px;
     width: 32%;
     left: 90%;
+    
 }
 
-#year.form-control {
+.form-group {
 
-    text-align: center;
+    text-align: center; 
     width: 30%;
     position: relative;
     margin-right: 35px;
     box-sizing: border-box;
     left: 90%;
-}
-
-#company.form-control {
-
-    text-align: center;
-    width: 30%;
-    position: relative;
-    margin-right: 35px;
-    box-sizing: border-box;
-    left: 90%;
-}
-
-#model.form-control {
-
-    text-align: center;
-    width: 30%;
-    position: relative;
-    margin-right: 35px;
-    box-sizing: border-box;
-    left: 90%;
+    font-size: 20px;
 }
 
 #pickup.form-control {
@@ -85,6 +61,7 @@ select {
     margin-right: 35px;
     box-sizing: border-box;
     left: 90%;
+    font-size: 22px;
 }
 
 #dropoff.form-control {
@@ -95,6 +72,7 @@ select {
     margin-right: 35px;
     box-sizing: border-box;
     left: 90%;
+    font-size: 22px;
 }
 
 textarea {
@@ -115,6 +93,7 @@ textarea {
     margin-right: 35px;
     box-sizing: border-box;
     left: 90%;
+    font-size: 22px;
 }
 
 .btn.btn-danger.btn-confirm.btn-clock {
@@ -125,6 +104,18 @@ textarea {
     padding: 13px;
     left: 98%;
     position: relative;
+}
+
+.form-group2 {
+
+    text-align: center;
+    position: relative;
+    margin-right: 35px;
+    box-sizing: border-box;
+    font-weight: 600;
+    padding: 40px;
+    left: 58%;
+    font-size: 22px;
 }
 
 
