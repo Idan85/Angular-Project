@@ -19,7 +19,7 @@ mongoose.connect(config.DB_URI, {useNewUrlParser: true }).then(() => {
     
     const fakeDb = new FakeDb();
 
-    // fakeDb.seedDb();
+    //fakeDb.seedDb();
 });
 
 const app = express();
