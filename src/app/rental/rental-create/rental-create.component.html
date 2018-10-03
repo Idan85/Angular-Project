@@ -1,0 +1,171 @@
+<section id="newRental">
+  <div class="app-rental-create">
+    <div class="row">  
+      
+        <div class="col-md-12-ml-auto">
+          <h2 class="catchphrase">Awsome Cars and Prices in reach of few clicks</h2>
+
+        <h1 class="page-title">Create Renatl</h1>
+
+        <form #rentalForm="ngForm">
+
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text"
+                   class="form-control"
+                   id="category"
+                   name="category"
+                   [(ngModel)]="newRental.category"
+                   required>
+            </div>
+
+            <div class="form-group">
+                <label for="model">Model</label>
+                <input type="text"
+                       class="form-control"
+                       id="model"
+                       name="model"
+                       [(ngModel)]="newRental.model"
+                       required>
+                </div>
+
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text"
+                       class="form-control"
+                       id="company"
+                       name="company"
+                       [(ngModel)]="newRental.company"
+                       required>
+                </div>
+
+            <div class="form-group">
+                  <label for="year">Year</label>
+                  <input type="number"
+                         class="form-control"
+                         id="year"
+                         name="year"
+                         [(ngModel)]="newRental.year"
+                         required>
+                  </div>
+
+            <div class="form-group">
+                 <label for="seats">Seats</label>
+                 <input type="number"
+                        class="form-control"
+                        id="seats"
+                        name="seats"
+                        [(ngModel)]="newRental.number"
+                        required>
+                      </div>
+
+            <div class="form-group">
+                 <label for="doors">Doors</label>
+                 <input type="number"
+                        class="form-control"
+                        id="doors"
+                        name="doors"
+                        [(ngModel)]="newRental.doors"
+                        required>
+                        </div>
+
+            <div class="form-group">
+                 <label for="dailyRate">Daily Rate</label>
+                 <div class="input-group">
+                  <div class="input-group-prepend">
+                   <div class="input-group-text">$</div>
+                   </div>                
+                   <input type="number"
+                          name="dailyRate"
+                          class="form-control"
+                          id="dailyRate"
+                          name="dailyRate"
+                          [(ngModel)]="newRental.dailyRate"
+                          required>
+                    </div>
+                    </div>
+
+             <div class="form-group">
+                 <label for=" image">Image</label>
+                 <input type="file"
+                        name=" image"
+                        class="form-control"
+                        id="image"
+                        accept=".png,.jpg,.jpeg"
+                        placeholder="Upload file..."
+                        (change)="handleImageChange()">                       
+                        </div> 
+
+             <div class="form-group">
+                  <label for="specificiations">Specificiations</label>
+
+                  <select class="form-control"
+                         id="specificiations"
+                         name="Specificiations"
+                         [(ngModel)]="newRental.specificiations"
+                         required>
+
+                         <option> Automatic gearbox </option>
+                         <option> Manual gearbox </option>
+                        </select>                         
+                        </div>
+
+            <div class="form-group">
+                <label for="pickup">Pick-Up</label>
+          
+                <select class="form-control"
+                        id="pickup"
+                        name="pickup"
+                        [(ngModel)]="newRental.pickup"
+                        required>
+
+                        <option> Ben Gurion Airport, terminal 3, Tel Aviv-Yafo </option>
+                        <option> Sde Dov Airport, Tel Aviv-Yafo </option>
+                        </select>                         
+                        </div>
+
+            <div class="form-group">
+                 <label for="dropoff">Drop-Off</label>
+                      
+                 <select class="form-control"
+                         id="dropoff"
+                         name="dropoff"
+                         [(ngModel)]="newRental.dropoff"
+                         required>
+
+                        <option> Ben Gurion Airport, terminal 3, Tel Aviv-Yafo </option>
+                        <option> Sde Dov Airport, Tel Aviv-Yafo </option>
+                        </select>                         
+                        </div>
+
+              <!-- <div class="form-group">
+                  <label for="description">Description</label>
+          
+                  <textarea rows="5"
+                            type="text"
+                            class="form-control"
+                            id="description"
+                            name="description"
+                            [(ngModel)]="newRental.description">
+                            </textarea>
+                            </div> -->
+
+            <button (click)="createRental()"
+                    [disabled]="!rentalForm.form.valid"
+                    type="button" 
+                    class="btn btn-danger btn-confirm btn-clock">submit</button>
+            </form>
+
+           <div *ngIf="errors.length > 0" class="alert alert-danger-2">
+                <p *ngFor="let error of errors">
+                  {{ error.detail }}
+                </p>
+              </div>
+
+         </div>     
+        
+        </div>
+      </div>
+    
+</section>
+

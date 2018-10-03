@@ -39,6 +39,7 @@ form {
     left: 157%;
     font-size: 120px;
     color:  #F44336;
+    
 }
 
 .form-control {
@@ -67,6 +68,7 @@ form {
 .catchphrase {
 
     text-align: center;
+    left: 330px;
     font-size: 50px;
     position: relative;
     color: #f1f1f1;
@@ -111,4 +113,12 @@ form {
     left: 140%;
     position: relative;
     text-align: center;
+}
+
+label {
+    color: black;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    position: relative;
 }

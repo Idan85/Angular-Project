@@ -8,6 +8,8 @@ import { HelperService } from '../../../common/service/helper.service';
 
 import { BookingService } from './../../../booking/shared/booking.service';
 
+import { AuthService } from './../../../auth/shared/auth.service';
+
 import { BsModalService } from 'ngx-bootstrap/modal';
 
 import { ToastrService } from 'ngx-toastr';
@@ -66,8 +68,9 @@ export class RentalDetailBookingComponent implements OnInit {
   constructor( private helper: HelperService,
                private modalService: BsModalService,
                private bookingService: BookingService,
-               private toastr: ToastrService
-               ) {
+               private toastr: ToastrService,
+               public auth: AuthService ) {
+
   }
 
   private addNewBookedDates ( bookingData: any ) {

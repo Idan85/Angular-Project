@@ -1,7 +1,11 @@
 import { Component, OnInit, Input  } from '@angular/core';
+
 import { Rental } from '../shared/rental.model';
+
 import { ActivatedRoute } from '@angular/router';
+
 import { RentalService } from '../shared/rental.service';
+
 import { HelperService } from '../../common/service/helper.service';
 
 @Component({
@@ -14,6 +18,8 @@ export class SearchComponent implements OnInit {
   @Input() rental: any;
 
   isShow = false;
+
+  newRental: Rental;
 
   dropdownList = [];
 
@@ -45,6 +51,8 @@ export class SearchComponent implements OnInit {
   }
 
 ngOnInit() {
+
+this.newRental = new Rental ();
 
 this.dropdownList = [
                     { item_id: 1, item_text: 'Automatic Gearbox' },
@@ -154,9 +162,17 @@ onItemSelect (item: any ) {
 onSelectAll (items: any) {
                           console.log(items);
 }
+
+createRental () {
+
+  console.log ( this.newRental );
+
+}
 }
 
 export class AppSearch {}
+
+
 
 
 

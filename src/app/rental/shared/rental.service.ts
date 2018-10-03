@@ -12,6 +12,28 @@ export class RentalService {
 
     constructor (private http: HttpClient) {}
 
+    public getRentalById(rentalId: string): Observable<any> {
+
+    return this.http.get ('/api/v1/rentals/' + rentalId);
+
+    }
+
+    public getRentals(): Observable<any> {
+
+    return this.http.get ('/api/v1/rentals');
+
+    }
+
+    public getRentalsByCategory ( category: string ): Observable<any> {
+
+        return this.http.get (`/api/v1/rentals?category=${category}`);
+}
+
+public createRental ( rental: Rental ): Observable<any> {
+
+    return this.http.post ('/api/v1/rentals', rental );
+}
+}
 //    private rentals: Rental[] = [{
 //     id: '1',
 //     category: 'Small Car',
@@ -73,9 +95,7 @@ export class RentalService {
 //     image: 'https://cdn2.rcstatic.com/images/car_images/new_images/subaru/xv_lrg.jpg',
 // }];
 
-public getRentalById(rentalId: string): Observable<any> {
 
-    return this.http.get ('/api/v1/rentals/' + rentalId);
 
 /*     return new Observable<Rental>((observer) => {
 
@@ -87,11 +107,7 @@ public getRentalById(rentalId: string): Observable<any> {
         observer.next(foundRental);
         }, 500);
         }); */
-    }
 
-public getRentals(): Observable<any> {
-
-    return this.http.get ('/api/v1/rentals');
 
    /*  return new Observable <Rental[]> (( observer ) => { */
 
@@ -118,5 +134,4 @@ public getRentals(): Observable<any> {
     /* }); */
 
    /*  return rentalObservable; */
-}
-}
+

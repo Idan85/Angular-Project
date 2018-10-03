@@ -15,6 +15,8 @@ import { RentalListItemComponent } from './rental-list-item/rental-list-item.com
 import { RentalService } from './shared/rental.service';
 import { RentalDetailComponent } from './rental-detail/rental-detail.component';
 import { RentalDetailBookingComponent } from './rental-detail/rental-detail-booking/rental-detail-booking.component';
+import { RentalSearchComponent } from './rental-search/rental-search.component';
+import { RentalCreateComponent } from './rental-create/rental-create.component';
 
 import { SearchDatesComponent } from './search/search-dates/search-dates.component';
 import { SearchComponent } from './search/search.component';
@@ -27,13 +29,17 @@ import { HelperService } from '../common/service/helper.service';
 import { BookingService } from './../booking/shared/booking.service';
 
 
+
+
 const routes: Routes = [
     { path: 'rentals',
       component: RentalComponent,
       children: [
-        // { path: '', component: SearchComponent },
+        //  { path: 'search', component: SearchComponent },
           { path: '', component: RentalListComponent},
-          { path: ':rentalId', component: RentalDetailComponent, canActivate: [ AuthGuard ]}
+          { path: 'new', component: RentalCreateComponent, canActivate: [ AuthGuard ]},
+          { path: ':rentalId', component: RentalDetailComponent },
+          { path: ':category/cars', component: RentalSearchComponent}
       ]
     },
   ];
@@ -48,7 +54,9 @@ const routes: Routes = [
         RentalDetailBookingComponent,
         SearchComponent,
         FilterResultsComponent,
-        SearchDatesComponent
+        SearchDatesComponent,
+        RentalSearchComponent,
+        RentalCreateComponent
     ],
 
     imports: [

@@ -1,6 +1,8 @@
 <div class="booking">
   <h3 class="booking-price"> ${{ rental.dailyRate }} <span class="booking-per-day">Per Day</span></h3>
   <hr>
+
+  <ng-container *ngIf="auth.isAuthenticated()">
   <form #bookingForm="ngForm">
   <label>Dates:</label>
   <input type="text" class="form-control daterangepicker-input" name="daterangeInput" daterangepicker [options]="options"
@@ -15,6 +17,12 @@
                   [disabled]="!bookingForm.form.valid || !newBooking.startAt || !newBooking.startAt" 
                   class="btn btn-danger btn-confirm btn-clock">Rental Car Now</button>
           <hr>
+          </ng-container>
+
+          <div *ngIf="!auth.isAuthenticated()" class="should-login">
+            <a routerLink="/login">Login and book this car today</a>
+          </div>
+
           <p class="booking-note-title">People are intrested in this Car</p>
           <p class="booking-note-text">More than 1000 people checked this rental in last month</p>
     </div>

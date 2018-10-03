@@ -56,23 +56,26 @@ select {
 #pickup.form-control {
 
     text-align: center;
-    width: 30%;
+    width: 44%;
     position: relative;
     margin-right: 35px;
     box-sizing: border-box;
-    left: 90%;
+    left:130%;
     font-size: 22px;
+    height: calc(2.25rem + 8px); 
+    
 }
 
 #dropoff.form-control {
 
     text-align: center;
-    width: 30%;
+    width: 40%;
     position: relative;
     margin-right: 35px;
     box-sizing: border-box;
     left: 90%;
     font-size: 22px;
+    height: calc(2.25rem + 8px);
 }
 
 textarea {
@@ -82,7 +85,7 @@ textarea {
     position: relative;
     margin-right: 35px;
     box-sizing: border-box;
-    left: 45%
+    left: 10%
 }
 
 .form-control.daterangepicker-input {
@@ -104,6 +107,18 @@ textarea {
     padding: 13px;
     left: 98%;
     position: relative;
+}
+
+.form-group1 {
+
+    text-align: center;
+    position: relative;
+    margin-right: 35px;
+    box-sizing: border-box;
+    font-weight: 600;
+    padding: 40px;
+    right: 30%;
+    font-size: 22px;
 }
 
 .form-group2 {

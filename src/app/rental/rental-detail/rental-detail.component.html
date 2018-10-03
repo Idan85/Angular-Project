@@ -8,7 +8,13 @@
                 <hr>
                 <div class="detail-section">               
                             <div class = "rental">
-                                <h2 class = "rental-type {{ rental.category}}">Category: {{ rental.category | ucwords  }}</h2>
+                                
+                                <div class="rental-owner">
+                                    <img src="http://api.adorable.io/avatars/285/abott@adorable.png" alt="">
+                                    <span>{{ rental.user.username }}</span>
+                                </div>
+
+                                <h2 class = "rental-type {{ rental.category}}">Category: {{ rental.category | ucwords  }}</h2>                                
                                 <h1 class = "rental-model">Model: {{ rental.model | ucwords }}</h1>
                                 <h2 class = "rental-company">Company: {{ rental.company  }}</h2>
                                 <h2 class = "retnal-specificiations">Specification: {{ rental.specificiations  }}</h2>
