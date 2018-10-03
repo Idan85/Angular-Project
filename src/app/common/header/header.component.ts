@@ -22,6 +22,11 @@ import { AuthService } from './../../auth/shared/auth.service';
       this.router.navigate ([ '/login' ]);
     }
 
+    search ( category: string ) {
+
+      category ? this.router.navigate ([ `/rentals/${category}/cars`]) : this.router.navigate ([ '/rentals' ]);
+    }
+
     @Output() featureSelected = new EventEmitter<string>();
 
     onSelect (feature: string) {

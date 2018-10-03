@@ -1,3 +1,9 @@
+.booking {
+
+    padding: 20px;
+    border: 1px solid lightgray;
+}
+
 .btn.btn-danger.btn-confirm.btn-clock {
 
     background-color: #FF5A5F;
@@ -11,7 +17,7 @@
 
 label {
 
-    color: #FF5A5F;
+    color: black;
     text-align: center;
     font-size: 22px;
     font-weight: 700;
@@ -47,7 +53,8 @@ label {
     position: relative;
     margin-right: 35px;
     box-sizing: border-box;
-    display: inline-block;  
+    display: inline-block; 
+    left: 5%; 
 }
 
 h3 {
@@ -154,6 +161,24 @@ p {
 .in-range.available {
 
     background-color: #ffa9a9;
+}
+
+.should-login {
+
+    background-color: #FF5A5F;
+    color: white;
+    text-align: center; 
+    position: relative;
+}
+
+a {
+    color: white;
+    font-size: 17px;
+    padding: 15px;
+    background-color: transparent;
+    font-size: 22px;
+    font-weight: 700;
+
 }
 
     

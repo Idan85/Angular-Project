@@ -58,5 +58,22 @@ img {
     text-align: center;
 }
 
+.rental-owner {
+
+    position: relative; 
+    float: right;
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+    font-size: 17px;
+    font-weight: 1000;
+    width: 15%;
+    text-align: center;
+
+}
+
+
+
+
 
 

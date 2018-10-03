@@ -1,4 +1,4 @@
-<!-- <a routerLink="/rentals/car findings"></a> -->
+<!-- <a routerLink="/rentals/car findings"></a>  -->
 
 <section class="searching">
    <div class="serching">
@@ -14,17 +14,21 @@
             
     
           <app-search-dates></app-search-dates>
+
                     <p>
-                    <label for="Gearbox">Gearbox:</label>
+                    <label for="gearbox">Gearbox:</label>
                     </p>   
 
-                     <div class="form-group" >                
+                    <div class="form-group">
+
                      <ng-multiselect-dropdown
                      [placeholder]="'Choose Gearbox'"
                      [data]="dropdownList"
                      [settings]="dropdownSettings"
                      (onSelect)="onItemSelect($event)"
-                     (onSelectAll)="onSelectAll($event)">
+                     (onSelectAll)="onSelectAll($event)"
+                     name="gearbox" 
+                     [(ngModel)]="newRental.gearbox">                  
                     </ng-multiselect-dropdown> 
                      
                      </div>     
@@ -34,12 +38,15 @@
                     </p>
 
                     <div class="form-group">
+
                     <ng-multiselect-dropdown 
                     [placeholder]="'Choose Production Year'"
                     [data]="dropdownList1"
                     [settings]="dropdownSettings"
                     (onSelect)="onItemSelect($event)"
-                    (onSelectAll)="onSelectAll($event)">
+                    (onSelectAll)="onSelectAll($event)"
+                    name="year"
+                    [(ngModel)]="newRental.year">
                     </ng-multiselect-dropdown>
                     </div>   
                                       
@@ -48,12 +55,15 @@
                     </p>
 
                     <div class="form-group">
+
                     <ng-multiselect-dropdown
                     [placeholder]="'Choose Company'"
                     [data]="dropdownList2"
                     [settings]="dropdownSettings"
                     (onSelect)="onItemSelect($event)"
-                    (onSelectAll)="onSelectAll($event)">
+                    (onSelectAll)="onSelectAll($event)"
+                    name="company"
+                    [(ngModel)]="newRental.company">
                     </ng-multiselect-dropdown>
                     </div>     
             
@@ -63,12 +73,15 @@
                     </p>
 
                     <div class="form-group">
+
                     <ng-multiselect-dropdown 
                     [placeholder]="'Choose Model'"
                     [data]="dropdownList3"
                     [settings]="dropdownSettings"
                     (onSelect)="onItemSelect($event)"
-                    (onSelectAll)="onSelectAll($event)">
+                    (onSelectAll)="onSelectAll($event)"
+                    name="model"
+                    [(ngModel)]="newRental.model">
                     </ng-multiselect-dropdown>
                     </div>
 
@@ -76,7 +89,12 @@
                     <p>
                     <label for="pickup">Pick-up:</label>
                     </p>
-                    <select>    
+
+                    <select class="form-control"
+                            id="pickup"
+                            name="pickup"
+                            [(ngModel)]="newRental.pickup"> 
+
                     <option hidden>Choose</option>                    
                     <option value="Ben Gurion Airport, terminal 3">
                                    Ben Gurion Airport, terminal 3</option>
@@ -91,10 +109,16 @@
                    
                    <div class="form-group3">
                    <div class="ruleOptionsPanel" *ngIf="isShow">
+
                    <p>
-                   <label for="dropoff">Drop-off:</label>
+                   <label for="dropoff">Drop-Off:</label>
                    </p>
-                   <select>    
+
+                   <select class="form-control"
+                           id="dropoff"
+                           name="dropoff"
+                           [(ngModel)]="newRental.dropoff">  
+
                    <option hidden>Choose</option>                    
                    <option value="Ben Gurion Airport, terminal 3">
                                   Ben Gurion Airport, terminal 3</option>
@@ -105,16 +129,22 @@
                    </div>
                 
 
-            <div class="form-group3">
-            <p>
-            <label for="comments">Comments:</label>
-            </p>
-            <textarea  name="comments" rows="4" cols="100" form="userform">
-                      Enter text here...</textarea>
-                      </div>
+                      <p>
+                      <label for="description">Description:</label>
+                      </p>
+
+                      <div class="form-group">
+                      <textarea rows="5"
+                                type="text"
+                                class="form-control"
+                                id="description"
+                                name="description"
+                                [(ngModel)]="newRental.description">
+                                </textarea>
+                                </div>
 
         
-            <button class="btn btn-danger btn-confirm btn-clock">Search</button>
+            <button (click)="createRental()" type="button" class="btn btn-danger btn-confirm btn-clock">Search</button>
        </div>
      </div>
   </div>

@@ -39,3 +39,18 @@
 
     cursor: pointer;
 }
+
+.dropdown-item {
+
+font-size: 14px;
+}
+
+.dropdown-item:active {
+
+background-color: red;
+}
+
+.dropdown-item:focus {
+
+background-color: red;
+}

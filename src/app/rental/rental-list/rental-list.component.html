@@ -1,7 +1,7 @@
 <div class="container">
   <!-- <form class="main-form-horizonal"> -->
     <!-- <div class="fare-desktop"> -->
-      <div class="row">
+      <!-- <div class="row"> -->
         <!-- <div id="form-box">
           <div class="small-12 columns">
             <div id="location1" class="pickup-typehead">
@@ -33,13 +33,14 @@
             <app-filter-results></app-filter-results>
         </div>
         
-      <div class="col-md-10" *ngFor="let rental of rentals">
+      <div class="col-md-12">
+
+       <div class="list-group-item clearfix" *ngFor="let rental of rentals">
         <app-rental-list-item [rental]="rental"></app-rental-list-item>
+     </div>
+    </div>
+  </div>     
 
-        
-
-      
-     
 
 <!--       <div class='col-md-3 col-xs-6'>
           <app-rental-list-item></app-rental-list-item>
@@ -65,7 +66,7 @@
           <a herf="#" class="card-link">More Info</a>    
         </div> -->
       
-    </div>
+    <!-- </div> -->
     
 <!--     <div class='col-md-3 col-xs-6'>
         <div class="card-car-card">
@@ -114,5 +115,4 @@
            </div>
          </div>
        </div> -->
-     </div>
-    </div>
+    

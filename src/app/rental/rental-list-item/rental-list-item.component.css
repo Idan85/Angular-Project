@@ -1,16 +1,15 @@
 .list-group-item.clearfix {
 
-    box-sizing: border-box;
-    
-    
+    position: relative;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #dedede;
 }
-
 .card-text {
 
 font-size: 20px;
 font-weight: 800;
 color: #7e7e7e;
-position: relative;;
+position: relative;
 }
 
 .btn.btn-danger.btn-confirm.btn-clock {
