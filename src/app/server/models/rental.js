@@ -17,6 +17,7 @@ const rentalSchema = new Schema ({
     specificiations: { type: String, required: true, lowercase: true },
     dailyRate: Number,
     image: { type: String, required: true, lowercase: true },
+    createdAt: { type: String, default: Date.now },
 
     user: { type: Schema.Types.ObjectId, ref: 'User'},
     bookings: [{ type: Schema.Types.ObjectId, ref: 'Booking'}]

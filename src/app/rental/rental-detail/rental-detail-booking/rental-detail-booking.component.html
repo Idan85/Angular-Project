@@ -2,7 +2,10 @@
   <h3 class="booking-price"> ${{ rental.dailyRate }} <span class="booking-per-day">Per Day</span></h3>
   <hr>
 
+
+
   <ng-container *ngIf="auth.isAuthenticated()">
+  
   <form #bookingForm="ngForm">
   <label>Dates:</label>
   <input type="text" class="form-control daterangepicker-input" name="daterangeInput" daterangepicker [options]="options"
