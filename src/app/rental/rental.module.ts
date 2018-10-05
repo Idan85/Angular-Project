@@ -28,9 +28,6 @@ import { FilterResultsComponent } from './rental-list/filter-results/filter-resu
 import { HelperService } from '../common/service/helper.service';
 import { BookingService } from './../booking/shared/booking.service';
 
-
-
-
 const routes: Routes = [
     { path: 'rentals',
       component: RentalComponent,

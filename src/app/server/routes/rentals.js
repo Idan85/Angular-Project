@@ -66,7 +66,7 @@ router.delete ( '/:id', UserCtrl.authMiddleware, function ( req, res ) {
                      match: { startAt: { $gt: new Date ()}}
           })
            .exec ( function ( err, foundRental) {
-
+           debugger;
             if ( err ) {
 
                 return res.status ( 422 ).send ({ errors: normalizeErrors ( err.errors )});
@@ -83,7 +83,7 @@ router.delete ( '/:id', UserCtrl.authMiddleware, function ( req, res ) {
 
             }
 
-            foundRenatl.remove ( function ( err ) {
+            foundRental.remove ( function ( err ) {
 
                 if ( err ) {
 

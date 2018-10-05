@@ -45,6 +45,12 @@
     font-weight: 700;
 }
 
+#image.form-control {
+
+    padding: 1px 5px;
+
+}
+
 .btn.btn-danger.btn-confirm.btn-clock {
 
     background-color: #FF5A5F;
@@ -79,5 +85,27 @@ label {
     font-weight: 700;
     position: relative;
 }
+
+.alert.alert-danger-1 {
+
+    background-color:  #F44336;
+    border-color:  #F44336;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 40px;
+    position: relative;
+}
+
+.form-control {
+
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 20px;
+    color: #555;
+}
+
 
 

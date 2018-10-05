@@ -1,7 +1,16 @@
-.navbar {
+.navbar.navbar-expand-lg.navbar-light.bg-light {
 
     padding: 20px;
     margin-bottom: 40px;
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+a {
+
+    background-color: transparent;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 .car-rental-app-search {

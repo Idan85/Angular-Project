@@ -10,11 +10,12 @@ import { BookingService } from './../../../booking/shared/booking.service';
 
 import { AuthService } from './../../../auth/shared/auth.service';
 
+
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+
 import { BsModalService } from 'ngx-bootstrap/modal';
 
 import { ToastrService } from 'ngx-toastr';
-
-import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 import { DaterangePickerComponent } from 'ng2-daterangepicker';
 
@@ -70,6 +71,7 @@ export class RentalDetailBookingComponent implements OnInit {
                private bookingService: BookingService,
                private toastr: ToastrService,
                public auth: AuthService ) {
+
 
   }
 
