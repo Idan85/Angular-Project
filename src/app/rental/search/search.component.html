@@ -26,9 +26,9 @@
                      [data]="dropdownList"
                      [settings]="dropdownSettings"
                      (onSelect)="onItemSelect($event)"
-                     (onSelectAll)="onSelectAll($event)"
-                     name="gearbox" 
-                     [(ngModel)]="newRental.gearbox">                  
+                     (onSelectAll)="onSelectAll($event)">
+                     <!-- name="gearbox" 
+                     [(ngModel)]="newRental.gearbox"-->
                     </ng-multiselect-dropdown> 
                      
                      </div>     
@@ -44,9 +44,9 @@
                     [data]="dropdownList1"
                     [settings]="dropdownSettings"
                     (onSelect)="onItemSelect($event)"
-                    (onSelectAll)="onSelectAll($event)"
-                    name="year"
-                    [(ngModel)]="newRental.year">
+                    (onSelectAll)="onSelectAll($event)">
+                    <!-- name="year"
+                    [(ngModel)]="newRental.year" -->
                     </ng-multiselect-dropdown>
                     </div>   
                                       
@@ -61,9 +61,9 @@
                     [data]="dropdownList2"
                     [settings]="dropdownSettings"
                     (onSelect)="onItemSelect($event)"
-                    (onSelectAll)="onSelectAll($event)"
-                    name="company"
-                    [(ngModel)]="newRental.company">
+                    (onSelectAll)="onSelectAll($event)">
+                    <!-- name="company"
+                    [(ngModel)]="newRental.company" -->
                     </ng-multiselect-dropdown>
                     </div>     
             
@@ -79,9 +79,9 @@
                     [data]="dropdownList3"
                     [settings]="dropdownSettings"
                     (onSelect)="onItemSelect($event)"
-                    (onSelectAll)="onSelectAll($event)"
-                    name="model"
-                    [(ngModel)]="newRental.model">
+                    (onSelectAll)="onSelectAll($event)">
+                    <!-- name="model"
+                    [(ngModel)]="newRental.model" -->
                     </ng-multiselect-dropdown>
                     </div>
 
@@ -91,9 +91,9 @@
                     </p>
 
                     <select class="form-control"
-                            id="pickup"
-                            name="pickup"
-                            [(ngModel)]="newRental.pickup"> 
+                            id="pickup">
+                            <!-- name="pickup"
+                            [(ngModel)]="newRental.pickup"  -->
 
                     <option hidden>Choose</option>                    
                     <option value="Ben Gurion Airport, terminal 3">
@@ -115,9 +115,9 @@
                    </p>
 
                    <select class="form-control"
-                           id="dropoff"
-                           name="dropoff"
-                           [(ngModel)]="newRental.dropoff">  
+                           id="dropoff">
+                           <!-- name="dropoff"
+                           [(ngModel)]="newRental.dropoff"   -->
 
                    <option hidden>Choose</option>                    
                    <option value="Ben Gurion Airport, terminal 3">
@@ -137,9 +137,9 @@
                       <textarea rows="5"
                                 type="text"
                                 class="form-control"
-                                id="description"
-                                name="description"
-                                [(ngModel)]="newRental.description">
+                                id="description">
+                                <!-- name="description"
+                                [(ngModel)]="newRental.description" -->
                                 </textarea>
                                 </div>
 

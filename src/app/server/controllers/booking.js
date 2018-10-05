@@ -10,11 +10,11 @@ const moment = require ( 'moment' );
 
 exports.createBooking = function ( req, res ) {
 
-    const { startAt, endAt, totalPrice, pickup, dropoff, days, rental } = req.body;
+    const { startAt, endAt, totalPrice, pickup, dropoff, days, rental, createdAt } = req.body;
 
     const user = res.locals.user; 
 
-    const booking = new Booking ({ startAt, endAt, totalPrice, pickup, dropoff, days });
+    const booking = new Booking ({ startAt, endAt, totalPrice, pickup, dropoff, days, createdAt });
 
     Rental.findById ( rental._id ) 
           .populate ( 'bookings' )

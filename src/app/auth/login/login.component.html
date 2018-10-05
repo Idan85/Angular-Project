@@ -20,6 +20,7 @@
                    id="email"
                    placeholder="Enter Email" 
                    formControlName="email"
+                   placeholder="Enter Username"
                    required>
 
                    <div *ngIf="isInvalidInput ('email')" 
@@ -44,7 +45,7 @@
                              required>
 
                              <div *ngIf="isInvalidInput ('password')" 
-                             class="alert alert-danger-1">
+                                   class="alert alert-danger-1">
                          
                              <div *ngIf="isRequired ('password')">Password Is Required.
                            </div>
