@@ -74,8 +74,28 @@ h3.title {
     left: 40px;
 }
 
+.rental[_ngcontent-c3] {
 
+    position: relative;
+    font-size: 32px;
+    font-weight: 700; 
+    margin: 0;
+}
 
+.rental-car-info[_ngcontent-c3] {
 
+    position: relative;
+    font-size: 32px;
+    font-weight: 700; 
+    margin: 0;
+}
+
+.rental-assets[_ngcontent-c3] {
+
+    position: relative;
+    font-size: 32px;
+    font-weight: 700; 
+    margin: 0;
+}
 
 

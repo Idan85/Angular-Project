@@ -21,8 +21,6 @@ export class ManageBookingComponent implements OnInit {
 
       ( bookings: Booking [] ) => {
 
-        debugger;
-
         this.bookings = bookings;
       },
 

@@ -18,8 +18,6 @@ export class TokenInterceptor implements HttpInterceptor {
 
         const token = this.auth.getAuthToken ();
 
-        // debugger;
-
         if ( token ) {
 
         request = request.clone ( {

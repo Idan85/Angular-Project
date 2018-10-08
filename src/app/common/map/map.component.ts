@@ -1,15 +1,19 @@
-import { Component, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, Input, ChangeDetectorRef, OnInit, OnDestroy } from '@angular/core';
 
 import { MapService } from './map.service';
+
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
-export class MapComponent  {
+export class MapComponent implements OnInit, OnDestroy  {
 
   @Input () location: string;
+
+  @Input () locationSubject: Subject<any>;
 
   // tslint:disable-next-line:no-inferrable-types
   isPositionError: boolean = false;
@@ -21,17 +25,26 @@ export class MapComponent  {
   constructor (private mapService: MapService,
                private ref: ChangeDetectorRef ) { }
 
-  // ngOnInit() {
-  // }
+  ngOnInit() {
 
-  mapReadyHandler () {
+  if ( this.locationSubject ) {
 
-    // let currentLocation = this.location;
+    this.locationSubject.subscribe (( location: string ) => {
 
-    // if (Math.round (Math.random() * 10) * 5) {
+      this.getLocation ( location );
+    });
+  }
+  }
 
-    //   currentLocation = 'sadad78asd6a87d';
-    // }
+  ngOnDestroy () {
+
+    if ( this.locationSubject ) {
+
+      this.locationSubject.unsubscribe ();
+    }
+  }
+
+  getLocation ( location ) {
 
     this.mapService.getGeoLocation (this.location).subscribe (
 
@@ -47,5 +60,11 @@ export class MapComponent  {
 
         this.isPositionError = true;
       });
-      }
+}
+
+  mapReadyHandler () {
+
+   this.getLocation ( this.location );
   }
+
+}

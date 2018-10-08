@@ -10,6 +10,8 @@
     "specificiations": "Manual gearbox",
     "dailyRate": 46,
     "image": "https://cdn2.rcstatic.com/images/car_images/new_images/suzuki/alto_lrg.jpg",
+    "smallbags": 1,
+    "largebags": 1,
     "pickup": "Ben Gurion Airport, terminal 3, Tel Aviv-Yafo",
     "dropoff": "Sde Dov Airport, Tel Aviv-Yafo"
   },
@@ -24,6 +26,8 @@
   "specificiations": "Automatic gearbox",
   "dailyRate": 95,
   "image": "https://cdn2.rcstatic.com/images/car_images/new_images/kia/picanto_5_door_lrg.jpg",
+  "smallbags": 1,
+  "largebags": 1,
   "pickup": "Sde Dov Airport, Tel Aviv-Yafo",
   "dropoff":"Ben Gurion Airport, terminal 3, Tel Aviv-Yafo"
 },
@@ -38,6 +42,8 @@
     "specificiations": "Automatic gearbox",
     "dailyRate": 54,
     "image": "https://cdn2.rcstatic.com/images/car_images/new_images/hyundai/i25_accent_lrg.jpg",
+    "smallbags": 1,
+    "largebags": 2,
     "pickup": "Ben Gurion Airport, terminal 3, Tel Aviv-Yafo",
     "dropoff": "Sde Dov Airport, Tel Aviv-Yafo"
   },
@@ -52,6 +58,8 @@
     "specificiations": "Manual gearbox",
     "dailyRate": 94,
     "image": "https://cdn2.rcstatic.com/images/car_images/new_images/nissan/micra_lrg.jpg",
+    "smallbags": 1,
+    "largebags": 2,
     "pickup": "Sde Dov Airport, Tel Aviv-Yafo",
     "dropoff": "Ben Gurion Airport, terminal 3, Tel Aviv-Yafo"
   },
@@ -67,6 +75,8 @@
     "specificiations": "Automatic gearbox",
     "dailyRate": 78,
     "image": "https://cdn2.rcstatic.com/images/car_images/new_images/mazda/6_lrg.jpg",
+    "smallbags": 2,
+    "largebags": 3,
     "pickup": "Ben Gurion Airport, terminal 3, Tel Aviv-Yafo",
     "dropoff": "Sde Dov Airport, Tel Aviv-Yafo"
   },
@@ -81,6 +91,8 @@
     "specificiations": "Automatic gearbox",
     "dailyRate": 123,
     "image": "https://cdn2.rcstatic.com/images/car_images/new_images/subaru/impreza_lrg.jpg",
+    "smallbags": 2,
+    "largebags": 3,
     "pickup": "Sde Dov Airport, Tel Aviv-Yafo" ,
     "dropoff": "Ben Gurion Airport, terminal 3, Tel Aviv-Yafo"  
   },
@@ -95,6 +107,8 @@
   "specificiations": "Automatic gearbox",
   "dailyRate": 231,
   "image": "https://cdn2.rcstatic.com/images/car_images/new_images/mazda/5_lrg.jpg",
+  "smallbags": 3,
+  "largebags": 4,
   "pickup": "Ben Gurion Airport, terminal 3, Tel Aviv-Yafo",
   "dropoff": "Sde Dov Airport, Tel Aviv-Yafo"
   },
@@ -109,6 +123,8 @@
   "specificiations": "Manual gearbox",
   "dailyRate": 205,
   "image": "https://cdn2.rcstatic.com/images/car_images/new_images/citroen/berlingo_lrg.jpg",
+  "smallbags": 3,
+  "largebags": 4,
   "pickup": "Sde Dov Airport, Tel Aviv-Yafo",
   "dropoff": "Ben Gurion Airport, terminal 3, Tel Aviv-Yafo" 
   },
@@ -123,6 +139,8 @@
   "specificiations": "Automatic gearbox",
   "dailyRate": 192,
   "image": "https://cdn2.rcstatic.com/images/car_images/new_images/opel/mokka_lrg.jpg",
+  "smallbags": 4,
+  "largebags": 3,
   "pickup": "Ben Gurion Airport, terminal 3, Tel Aviv-Yafo",
   "dropoff": "Sde Dov Airport, Tel Aviv-Yafo"
       },
@@ -137,6 +155,8 @@
   "specificiations": "Automatic gearbox",
   "dailyRate": 157,
   "image": "https://cdn2.rcstatic.com/images/car_images/new_images/mitsubishi/outlander_lrg.jpg",
+  "smallbags": 4,
+  "largebags": 3,
   "pickup": "Sde Dov Airport, Tel Aviv-Yafo",
   "dropoff": "Ben Gurion Airport, terminal 3, Tel Aviv-Yafo"
 

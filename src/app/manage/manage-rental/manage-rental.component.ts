@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
 
 import { RentalService } from './../../rental/shared/rental.service';
 import { Rental } from './../../rental/shared/rental.model';
 
 import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-manage-rental',
@@ -44,11 +46,10 @@ export class ManageRentalComponent implements OnInit {
 
           this.rentalDeleteIndex = undefined;
 
-
         },
 
-        ( ) => {
-          this.toastr.error ( 'Cannot delete rental with active bookings!', 'Failed!' );
+        ( errorResponse: HttpErrorResponse ) => {
+          this.toastr.error ( errorResponse.error.errors[0].detail, 'Failed!' );
 
         });
     }

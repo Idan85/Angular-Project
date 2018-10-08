@@ -11,14 +11,15 @@ const rentalSchema = new Schema ({
    /*  street: { type: String, required: true, min: [4, 'Too short, min is 4 characters'] }, */
     pickup: { type: String},  
     dropoff: { type: String}, 
-    year: Number, 
-    seats: Number, 
-    doors: Number,
+    year: { type: Number, required: true},
+    seats: { type: Number, required: true},
+    doors: { type: Number, required: true},
     specificiations: { type: String, required: true, lowercase: true },
     dailyRate: Number,
     image: { type: String, required: true, lowercase: true },
     createdAt: { type: Date, default: Date.now },
-
+    smallbags: { type: Number },
+    largebags: { type: Number },
     user: { type: Schema.Types.ObjectId, ref: 'User'},
     bookings: [{ type: Schema.Types.ObjectId, ref: 'Booking'}]
 });

@@ -116,9 +116,11 @@ form {
 }
 
 label {
+    
     color: black;
     text-align: center;
     font-size: 22px;
     font-weight: 700;
     position: relative;
+    left: -10px;
 }
