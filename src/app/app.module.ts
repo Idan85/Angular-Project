@@ -17,6 +17,7 @@ import { ManageModule } from './manage/manage.module';
 
 
 
+
  const routes: Routes = [
   {path: 'car 2 rental', component: HomeComponent },
   {path: '', redirectTo: '/rentals', pathMatch: 'full' },
@@ -29,8 +30,6 @@ import { ManageModule } from './manage/manage.module';
     AppComponent,
     HeaderComponent,
     HomeComponent
-
-
   ],
   imports: [
     RouterModule.forRoot(routes),

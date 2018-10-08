@@ -91,7 +91,7 @@
                         class="form-control"
                         id="seats"
                         name="seats"
-                        [(ngModel)]="newRental.number"
+                        [(ngModel)]="newRental.seats"
                         placeholder="Enter Seats Number"
                         #seats="ngModel"
                         required>
@@ -163,7 +163,7 @@
              <div class="form-group">
                   <label for="specificiations">Specificiations:</label>
 
-                  <select class="form-control"
+                  <select class="form-control1"
                          id="specificiations"
                          name="Specificiations"
                          [(ngModel)]="newRental.specificiations"
@@ -186,7 +186,7 @@
             <div class="form-group">
                 <label for="pickup">Pick-Up:</label>
           
-                <select class="form-control"
+                <select class="form-control2"
                         id="pickup"
                         name="pickup"
                         [(ngModel)]="newRental.pickup"
@@ -209,7 +209,7 @@
             <div class="form-group">
                  <label for="dropoff">Drop-Off:</label>
                       
-                 <select class="form-control"
+                 <select class="form-control2"
                          id="dropoff"
                          name="dropoff"
                          [(ngModel)]="newRental.dropoff"
@@ -247,11 +247,11 @@
                     class="btn btn-danger btn-confirm btn-clock">submit</button>
             </form>
 
-           <div *ngIf="errors.length > 0" class="alert alert-danger-2">
+           <!-- <div *ngIf="errors.length > 0" class="alert alert-danger-2">
                 <p *ngFor="let error of errors">
                   {{ error.detail }}
                 </p>
-              </div>
+              </div> -->
 
          </div>     
         </div>

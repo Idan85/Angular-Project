@@ -84,6 +84,7 @@ label {
     font-size: 22px;
     font-weight: 700;
     position: relative;
+    left: -10px;
 }
 
 .alert.alert-danger-1 {
@@ -105,6 +106,30 @@ label {
     padding: 20px 20px;
     font-size: 20px;
     color: #555;
+}
+.form-control1 {
+
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    color: #555;
+    text-rendering: auto;
+    padding: 1px 5px; 
+}
+
+.form-control2 {
+
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    color: #555;
+    text-rendering: auto;
+    padding: 1px 5px; 
+    left: -60px;
 }
 
 
