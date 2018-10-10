@@ -4,18 +4,27 @@ import { NgModule } from '@angular/core';
 
 import { EditableInputComponent } from './editable-input/editable-input.component';
 import { EditableSelectComponent } from './editable-select/editable-select.component';
+import { EditableImageComponent } from './editable-image/editable-image.component';
+import { ImageUploadModule } from '../image-upload/image-upload.module';
 
 @NgModule ({
 
     imports: [
 
         CommonModule,
-        FormsModule
+
+        FormsModule,
+
+        ImageUploadModule
     ],
 
     exports: [
 
     EditableInputComponent,
+
+    EditableSelectComponent,
+
+    EditableImageComponent,
 
     ],
 
@@ -24,6 +33,8 @@ import { EditableSelectComponent } from './editable-select/editable-select.compo
     EditableInputComponent,
 
     EditableSelectComponent,
+
+    EditableImageComponent,
 
     ]
 })

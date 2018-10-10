@@ -154,7 +154,7 @@ router.delete ( '/:id', UserCtrl.authMiddleware, function ( req, res ) {
 
 router.post ( '', UserCtrl.authMiddleware, function ( req, res ){
 
-    const { category, model, company, year, seats, doors, specificiations, dailyRate, image, pickup, dropoff } = req.body;
+    const { category, model, company, year, seats, doors, specificiations, dailyRate, image, smallbags, largebags, pickup, dropoff } = req.body;
 
     const user = res.locals.user;
 
