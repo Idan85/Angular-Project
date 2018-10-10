@@ -36,6 +36,16 @@ export class RentalCreateComponent implements OnInit {
     this.newRental = new Rental ();
   }
 
+  handleImageUpload ( imageUrl: string ) {
+
+    this.newRental.image = imageUrl;
+  }
+
+  handleImageError () {
+
+    this.newRental.image = '';
+  }
+
   createRental () {
 
     // console.log (this.newRental);

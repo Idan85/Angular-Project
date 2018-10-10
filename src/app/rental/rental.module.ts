@@ -8,7 +8,7 @@ import { Daterangepicker } from 'ng2-daterangepicker';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { EditableModule } from './../common/components/editable/editable.module';
+
 
 import { RentalComponent } from './rental.component';
 import { RentalListComponent } from './rental-list/rental-list.component';
@@ -25,12 +25,12 @@ import { SearchComponent } from './search/search.component';
 import { RentalGuard } from './shared/rental.guard';
 import { UpeercasePipe } from '../common/pipes/uppercase.pipe';
 import { AuthGuard } from './../auth/shared/auth.guard';
-
+import { EditableModule } from './../common/components/editable/editable.module';
 import { FilterResultsComponent } from './rental-list/filter-results/filter-results.component';
 
 import { HelperService } from '../common/service/helper.service';
 import { BookingService } from './../booking/shared/booking.service';
-
+import { ImageUploadModule } from './../common/components/image-upload/image-upload.module';
 
 const routes: Routes = [
     { path: 'rentals',
@@ -72,7 +72,8 @@ const routes: Routes = [
         NgMultiSelectDropDownModule,
         NgbModule,
         FormsModule,
-        EditableModule
+        EditableModule,
+        ImageUploadModule
     ],
 
     providers: [

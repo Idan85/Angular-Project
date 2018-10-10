@@ -30,6 +30,7 @@ import { ManageModule } from './manage/manage.module';
     AppComponent,
     HeaderComponent,
     HomeComponent
+
   ],
   imports: [
     RouterModule.forRoot(routes),
